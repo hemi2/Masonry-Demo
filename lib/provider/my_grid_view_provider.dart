@@ -7,7 +7,7 @@ class MyGridViewProvider extends ChangeNotifier {
   List<CardModel> list = [];
 
   Future<void> getData() async {
-    list = await TGNetService.getCardList(pageSize: 30);
+    list = await TGNetService.getCardList(pageSize: 300);
     notifyListeners();
   }
 }

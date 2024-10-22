@@ -14,7 +14,7 @@ class TGNetService {
     await Future.delayed(const Duration(seconds: 1), () {
       for (int i = 0; i < pageSize; i++) {
         // 随机1-100
-        final random = Random().nextInt(100) + 1;
+        final random = Random().nextInt(5) + 1;
         res.add(CardModel(
             title: '图片比例${ratio[random % 4]}',
             coverPhoto: 'https://picsum.photos/id/$random/200/300',
