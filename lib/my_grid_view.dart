@@ -31,9 +31,9 @@ class _MyGridViewState extends State<MyGridView> {
           builder: (context, provider, child) {
             return MasonryGridView.count(
               padding: const EdgeInsets.all(8),
-              crossAxisCount: 8,
-              mainAxisSpacing: 0,
-              crossAxisSpacing: 0,
+              crossAxisCount: 2,
+              mainAxisSpacing: 8,
+              crossAxisSpacing: 8,
               itemCount: provider.list.length,
               itemBuilder: (context, index) {
                 return _cardItem(provider.list[index]);
