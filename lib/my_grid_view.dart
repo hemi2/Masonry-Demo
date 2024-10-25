@@ -29,28 +29,28 @@ class _MyGridViewState extends State<MyGridView> {
         create: (context) => _provider,
         child: Consumer<MyGridViewProvider>(
           builder: (context, provider, child) {
-            // return MasonryGridView.count(
-            //   padding: const EdgeInsets.all(8),
-            //   crossAxisCount: 8,
-            //   mainAxisSpacing: 0,
-            //   crossAxisSpacing: 0,
-            //   itemCount: provider.list.length,
-            //   itemBuilder: (context, index) {
-            //     return _cardItem(provider.list[index]);
-            //   },
-            // );
-            return WaterfallFlow.builder(
+            return MasonryGridView.count(
               padding: const EdgeInsets.all(8),
-              gridDelegate: const SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 8,
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 0,
-              ),
+              crossAxisCount: 8,
+              mainAxisSpacing: 0,
+              crossAxisSpacing: 0,
               itemCount: provider.list.length,
               itemBuilder: (context, index) {
-               return _cardItem(provider.list[index]);
-              }
+                return _cardItem(provider.list[index]);
+              },
             );
+            // return WaterfallFlow.builder(
+            //   padding: const EdgeInsets.all(8),
+            //   gridDelegate: const SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
+            //     crossAxisCount: 8,
+            //     crossAxisSpacing: 0,
+            //     mainAxisSpacing: 0,
+            //   ),
+            //   itemCount: provider.list.length,
+            //   itemBuilder: (context, index) {
+            //    return _cardItem(provider.list[index]);
+            //   }
+            // );
           }
         ),
       ),
