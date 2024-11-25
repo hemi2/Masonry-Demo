@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/model/card_model.dart';
-import 'package:untitled/provider/my_grid_view_provider.dart';
+import 'package:untitled/page/water_fall/my_grid_view_provider.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';
 
 class MyGridView extends StatefulWidget {

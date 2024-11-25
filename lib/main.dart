@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/my_grid_view.dart';
+import 'package:untitled/page/fold_tap_flow/flow_tap_demo.dart';
+import 'package:untitled/page/water_fall/my_grid_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,14 +41,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
-              onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const MyGridView())),
-              child: const Text('瀑布流 Demo', style: TextStyle(fontSize: 21)),
-            )
+            _item(pageName: '瀑布流 Demo',page: const MyGridView()),
+            _item(pageName: '可折叠流布局 Demo',page: const FlowTapDemo()),
+           
           ],
         ),
       ),
+    );
+  }
+
+  Widget _item({required String pageName,required Widget page}) {
+    return OutlinedButton(
+      onPressed: () {
+         Navigator.push(context,MaterialPageRoute(builder: (context) => page));
+      },
+      child: Text(pageName, style: const TextStyle(fontSize: 21))
     );
   }
 }
